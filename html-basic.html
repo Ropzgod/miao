@@ -37,6 +37,108 @@
   <span>html的注释怎么写？</span>
   <br><br>
   <span>下面是一段javascript代码，最合适用何种标签表示呢？</span>
+  <pre>
+                      <code>
+                      function a(){
+                      return 8
+                      }
+                      </code>
+                    </pre>
+  <hr>
+  <ul>
+    <li>小学</li>
+    <ol>
+      <li>一年级</li>
+      <ol>
+        <li>上学期</li>
+        <li>下学期</li>
+      </ol>
+      <li>二年级</li>
+      <li>三年级</li>
+    </ol>
+    <li>中学</li>
+    <li>大学</li>
+  </ul>
+  <hr>
+  <dl>
+    <dt>班级</dt>
+    <dd>三年二班</dd>
+    <dt>老师</dt>
+    <dd>张老师</dd>
+    <dd>李老师</dd>
+    <dd>王老师</dd>
+    <dt>学生</dt>
+    <dd>小明</dd>
+    <dd>豆豆</dd>
+  </dl>
+  <hr>
+  <strong>Google</strong>
+  <br>
+  <form target="_blank" action="https://www.google.com">
+    <input type="text" name="q" required>
+    <input type="hidden" name="ie=UTF-8">
+    <input type="hidden" name="sourceid" value="chrome">
+    <button>在新窗口打开搜索结果</button>
+  </form>
+  <hr>
+  <form action="">
+    <span>个人信息调差表</span>
+    <dl>
+      <dt>性别</dt>
+      <dd><label>
+          <input type="radio" name="gender" value="man">男
+        </label>
+        <label><input type="radio" name="gender" value="women">女</label>
+      </dd>
+      <dt>年龄
+      <dd>
+        <select name="age">
+          <option value hidden>请选择</option>
+          <optgroup label="少年">
+            <option value="1-6">1-6</option>
+            <option value="6-12">6-12</option>
+          </optgroup>
+          <optgroup label="青年">
+            <option value="13-15">13-15</option>
+            <option value="16-18">16-18</option>
+          </optgroup>
+          <optgroup label="壮年">
+            <option value="19-25">19-25</option>
+            <option value="25-40">25-40</option>
+          </optgroup>
+        </select>
+      </dd>
+      </dt>
+      <dt>生日
+      <dd><input type="date" name="birthday"></dd>
+      </dt>
+      <dt>生辰
+      <dd>
+        <input type="time" name="birthtime">
+      </dd>
+      </dt>
+      <dt>照片</dt>
+      <dd><label><input hidden type="file" name="avatar">点我上传照片</label></dd>
+      <dt>颜色
+      <dd><input type="color">
+      </dd>
+      </dt>
+      <dt>自我介绍
+      <dd><textarea name="shuru" cols="30" rows="10">&lt;/textarea></textarea></dd>
+      </dt>
+      <fieldset disabled>
+        <legend>这里面的全都禁用了</legend>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+      </fieldset>
+      <button type="submit">提交</button>
+      <button type="reset">重置</button>
+    </dl>
+    <hr>
+  </form>
+
 </body>
 
 
