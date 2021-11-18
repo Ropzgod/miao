@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    main {
+      width: 600px;
+      margin: auto;
+    }
+
+    header {
+      background-color: black;
+    }
+
+    div {
+      color: white;
+      width: 600px;
+      margin: auto;
+    }
+
+    ul.product {
+      list-style: none;
+      margin-left: -40px;
+      width: 600px;
+      display: block;
+      list-style: none;
+    }
+
+    ul.product li {
+      width: 174px;
+      height: 40px;
+      background-color: pink;
+      border: 3px solid black;
+      margin-top: 15px;
+      text-align: center;
+      line-height: 34px;
+    }
+
+    ul.product li:nth-child(n+5) {
+      margin-left: 210px;
+    }
+
+    ul.product li:nth-child(n+9) {
+      margin-left: 420px;
+    }
+
+    ul.product li:nth-child(4n+5) {
+      margin-top: -229px;
+    }
+
+    ul.links {
+      list-style: none;
+      margin-left: -40px;
+      overflow: hidden;
+    }
+
+    ul.links li {
+      border-bottom: 1px dotted black;
+      padding-top: 1px;
+      margin-bottom: -1px;
+      margin-top: -1px;
+    }
+
+    p.bottom {
+      background-color: pink;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>hello world 请调整浏览器窗口大小查看效果</div>
+  </header>
+  <main>
+
+    <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px</p>
+    <ul class="product">
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <ul class="links">
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </main>
+  <p class="bottom">©版权所有
+    <br>
+    本页所有布局均使用块元素
+  </p>
+</body>
+
+</html>
