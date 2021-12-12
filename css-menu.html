@@ -7,69 +7,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    div {
-      width: 50px;
-      height: 20px;
+    body{
+      padding: 0;
+    }
+    ul{
+      padding: 0px;
       margin: 0px;
-    }
-
-    .u1 {
-      margin: auto;
-      padding: 0px;
-      border: 1px solid black;
-      width: 50px;
-      height: 20px;
-      position: absolute;
-      left: 0px;
-    }
-
-    .u2 {
-      margin: auto;
-      padding: 0px;
-      border: 1px solid black;
-      width: 50px;
-      height: 20px;
-      position: absolute;
-      left: 50px;
-    }
-
-    .u3 {
-      margin: auto;
-      padding: 0px;
-      border: 1px solid black;
-      width: 50px;
-      height: 20px;
-      position: absolute;
-      left: 100px;
-    }
-
-    li {
-      padding: 0px;
       list-style: none;
     }
-
-    .u1 {
-      visibility: hidden;
+    .main-menu li{
+      white-space: nowrap;
+      position: relative;
+    }
+    .main-menu > li{
+      display: inline-block;
     }
 
-    .u1:hover {
-      visibility: visible;
+    .main-menu li:hover{
+      background-color: red;
     }
+
+    .main-menu ul{
+      display: none;
+      position: absolute;
+    }
+
+    li:hover > ul{
+      display: block;
+    }
+
+    .main-menu ul li:hover{
+      background-color: yellow;
+    }
+    ul ul ul{
+      left: 100%;
+      top: 0;
+    }
+    
   </style>
 </head>
 
 <body>
-  <div class="u1">文件
-    <ul class="list1">
-      <li>asd</li>
-      <li>asda</li>
-      <li>asdsa</li>
-      <li>asd</li>
-    </ul>
-  </div>
-
-  <div class="u2">编辑</div>
-  <div class="u3">选择</div>
+  <ul class="main-menu">
+    <li>文件
+      <ul>
+        <li>新建文件
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>
+        <li>保存文件</li>
+        <li>新建窗口</li>
+        </ul>
+        </li>
+        <li>编辑</li>
+        <li>选择</li>
+        </ul>
 </body>
 
 </html>

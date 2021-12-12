@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    div {
+      height: 100%;
+      display: flow-root;
+    }
+
+    header {
+      height: 70px;
+      background-color: yellow;
+    }
+
+    aside {
+      width: 100px;
+      height: calc(100% - 70px);
+      background-color: red;
+      float: left;
+    }
+
+    main {
+      height: calc(100% - 70px);
+      background-color: chartreuse;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <header>
+    </header>
+    <aside></aside>
+    <main></main>
+  </div>
+</body>
+
+</html>

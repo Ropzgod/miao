@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    label {
+      width: 100px;
+      height: 50px;
+      border: solid 1px gray;
+      border-radius: 25px;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    div {
+      visibility: visible;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: calc(50% - 45px);
+      background-color: #ddd;
+      top: 30px;
+      border: 1px solid;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+
+    input:checked+label+div {
+      left: calc(50% + 5px);
+    }
+
+    input:checked+label {
+      background-color: rgba(24, 233, 153, 0.966);
+      transition: 0.2s;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" class="checkbox" id="heart" hidden>
+   <label for="heart"></label>
+   <div class="bottom"></div>
+
+</body>
+
+</html>
