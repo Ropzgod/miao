@@ -92,25 +92,25 @@
     console.log(n - x1)
 </script>
 <script id="ch0103/16">
-      var Xa = Number(prompt('Xa'))
-    var Ya = Number(prompt('Ya'))
-    var Xb = Number(prompt('Xb'))
-    var Yb = Number(prompt('Yb'))
-      var x = Math.sqrt(Xa * Xa + Ya * Ya)
-      var y = Math.sqrt(Xb * Xb + Yb * Yb)
-      console.log(parseFloat(Math.sqrt(x * x + y * y)).toFixed(3))
+    var x1 = Number(prompt('Xa'))
+    var y1 = Number(prompt('Ya'))
+    var x2 = Number(prompt('Xb'))
+    var y2 = Number(prompt('Yb'))
+      var x = ((x2 - x1) ** 2)
+      var y = ((y2 - y1) ** 2)
+      console.log(parseFloat(Math.sqrt(x + y)).toFixed(3))
   </script>
 
 <script id="ch0103/17">
   var x1 = Number(prompt('a'))
-  var x2 = Number(prompt('a'))
-  var x3 = Number(prompt('a'))
   var y1 = Number(prompt('a'))
+  var x2 = Number(prompt('a'))
   var y2 = Number(prompt('a'))
+  var x3 = Number(prompt('a'))
   var y3 = Number(prompt('a'))
-      var x = Math.sqrt((Math.abs(x2 - x1)) ** 2 + (Math.abs(y2 - y1)) ** 2)
-      var y = Math.sqrt((Math.abs(x3 - x2)) ** 2 + (Math.abs(y3 - y2)) ** 2)
-      var z = Math.sqrt((Math.abs(x3 - x1)) ** 2 + (Math.abs(y3 - y1)) ** 2)
+      var x = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+      var y = Math.sqrt((x3 - x2) ** 2 + (y3 - y2) ** 2)
+      var z = Math.sqrt((x3 - x1) ** 2 + (y3 - y1) ** 2)
         var p = (x + y + z) / 2
         console.log(parseFloat(Math.sqrt(p * (p - x) * (p - y) * (p - z))).toFixed(2))
 </script>
