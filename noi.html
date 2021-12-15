@@ -220,11 +220,17 @@
 <script id="ch0104/10">
   var x = Number(prompt('a'))
   var y = Number(prompt('a'))
-  if (x > 60){
-    if (y > 60 ){
+  if (x >= 60){
+    if (y >= 60 ){
+      console.log(0)
+    }else if (y < 60){
+      console.log(1)
+    }
+  }else if (x < 60){
+    if (y >= 60){
       console.log(0)
     }else console.log(1)
-  }else console.log(1)
+  }
 </script>
 
 <script id="ch0104/11">
@@ -358,4 +364,26 @@
   console.log(n - x1)
 </script>
 
+<script id="ch0105/01">
+  var n = Number(prompt('n'))
+  var i = 0
+  var c = 0
+  while (i < n)
+  {
+    i = i + 1
+    var a = Number(prompt(''))
+    var c = a + c
+  }console.log((c / n).toFixed(2))
+</script>
+
+<script id="ch0105/02">
+  var month = Number(12)
+  var i = 0
+  var all = 0
+  while (i < month) {
+    i = i + 1
+    var money = Number(prompt(''))
+    all = money + all
+  }console.log('$' + (all / 12).toFixed(2))
+</script>
 
