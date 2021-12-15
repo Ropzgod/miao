@@ -81,7 +81,7 @@
 <script id="ch0103/14">
   var h = Number(prompt('h'))
         var r = Number(prompt('a'))
-    console.log(Math.ceil(20000 / (3.14159 * r * d * r * h)))
+      console.log(Math.ceil(20000 / (3.14159 * r * r * r * h)))
 
 </script>
 <script id="ch0103/15">
@@ -92,11 +92,13 @@
     console.log(n - x1)
 </script>
 <script id="ch0103/16">
-            var Xa = Number(prompt('Xa'))
+      var Xa = Number(prompt('Xa'))
     var Ya = Number(prompt('Ya'))
     var Xb = Number(prompt('Xb'))
     var Yb = Number(prompt('Yb'))
-    console.log(parseFloat(Math.sqrt((Xa * Xa + Ya * Ya)) - Math.sqrt((Xb * Xb + Yb * Yb))).toFixed(3))
+      var x = Math.sqrt(Xa * Xa + Ya * Ya)
+      var y = Math.sqrt(Xb * Xb + Yb * Yb)
+      console.log(parseFloat(Math.sqrt(x * x + y * y)).toFixed(3))
   </script>
 
 <script id="ch0103/17">
@@ -109,7 +111,8 @@
       var x = Math.sqrt((Math.abs(x2 - x1)) ** 2 + (Math.abs(y2 - y1)) ** 2)
       var y = Math.sqrt((Math.abs(x3 - x2)) ** 2 + (Math.abs(y3 - y2)) ** 2)
       var z = Math.sqrt((Math.abs(x3 - x1)) ** 2 + (Math.abs(y3 - y1)) ** 2)
-      console.log(parseFloat(Math.sqrt((1 / 16) * (x + y + z) * (x + y - z) * (x + z - y) * (z + y - x))).toFixed(2))
+        var p = (x + y + z) / 2
+        console.log(parseFloat(Math.sqrt(p * (p - x) * (p - y) * (p - z))).toFixed(2))
 </script>
 <script id="ch0103/18">
   var a1 = Number(prompt('a'))
