@@ -364,6 +364,7 @@
   console.log(n - x1)
 </script>
 
+
 <script id="ch0105/01">
   var n = Number(prompt('n'))
   var i = 0
@@ -376,6 +377,7 @@
   }console.log((c / n).toFixed(2))
 </script>
 
+
 <script id="ch0105/02">
   var month = Number(12)
   var i = 0
@@ -386,6 +388,7 @@
     all = money + all
   }console.log('$' + (all / 12).toFixed(2))
 </script>
+
 <script id="ch0105/03">
   var  n = Number(prompt(''))
   var  i = 0
@@ -397,6 +400,8 @@
   }
   console.log((data / n).toFixed(4))
 </script>
+
+
 <script id="ch0105/04">
   var n = Number(prompt(''))
   var i = 0
@@ -409,6 +414,7 @@
   console.log(data)
   console.log((data / n).toFixed(5))
 </script>
+
 <script id="ch0105/05">
   var n = Number(prompt(''))
   var i = 0
@@ -423,6 +429,7 @@
   console.log(data)
 
 </script>
+
 <script id="ch0105/06">
   var n = Number(prompt(''))
   var i = 0
@@ -440,27 +447,68 @@
   }
   console.log(max - min)
 </script>
+
 <script id="ch0105/07">
   var  n = Number(prompt(''))
   var  i = 0
   var data = 0
+  var gold = 0
+  var silver = 0
+  var copper = 0
   while (i < n){
     i = i + 1
     var a = Number(prompt(''))
     var b = Number(prompt(''))
     var c = Number(prompt(''))
-    data     = a + data
+    gold = gold + a
+    silver = silver + b
+    copper = copper + c
   }
-  console.log((data / n).toFixed(4))
+  console.log(gold,silver,copper,gold + silver + copper)
 </script>
-<script id="ch0105/03">
 
+<script id="ch0105/08">
+  var n = Number(prompt(''))
+  var i = 1
+  var all = (n - 2) * 180
+  var data = 0
+  while (i < n){
+    i = i + 1
+    var a = Number(prompt(''))
+    data = a + data
+  }
+  console.log(all - data)
 </script>
-<script id="ch0105/03">
 
+<script id="ch0105/09">
+  var m = Number(prompt(''))
+  var n = Number(prompt(''))
+  var time = Math.ceil((n - m) / 2)
+  var i = 0
+  var data = 0
+  if (n % 2 != 0 && m % 2 != 0){
+    while (i < time + 1){
+    data = m + data
+    var m = m + 2
+    i = i + 1
+  }console.log(data)
+  }else if (m % 2 != 0){
+    while (i < time){
+    data = m + data
+    var m = m + 2
+    i = i + 1
+  }console.log(data)
+  }else {
+    while (i < time){
+    data = m + data
+    var m = m + 2
+    i = i + 1
+  }console.log(data + time)
+  }
 </script>
-<script id="ch0105/03">
 
+<script id="ch0105/10">
+  
 </script>
 <script id="ch0105/03">
 
