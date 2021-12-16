@@ -619,10 +619,50 @@
   console.log(sum)
 </script>
 <script id="ch0105/18">
-
+  var n = Number(prompt(''))
+  var i = 1
+  var a = Number(prompt(''))
+  var b = Number(prompt(''))
+  var effective = b / a
+  while (i < n){
+    i = i + 1
+    var c = Number(prompt(''))
+    var d = Number(prompt(''))
+    var effected = d / c
+    var e = (effective - effected) * 100
+    if (e > 5){
+      console.log('better')
+    }else if (e < -5){
+      console.log('worse')
+    }else {
+      console.log('same')
+    }
+  }
 </script>
-<script id="ch0105/03">
-
+<script id="ch0105/19">
+  var a = Number(prompt(''))
+  var i = 0
+  time = 0
+  while (i < a){
+    i = i + 1
+    var x = Number(prompt(''))
+    var y = Number(prompt(''))
+    var t = Math.sqrt(x * x + y * y) / 50 * 2
+    var n = Number(prompt(''))
+    var time = Math.ceil(t + n + 0.5 * n) + time
+  }console.log(time)
+</script>
+<script id="ch0105/20">
+  var h = Number(prompt(''))
+  var i = 0
+  var m = 0
+  while (i < 10){
+    i = i + 1
+    m = m + h + h /2
+    h = h / 2
+  }
+  console.log((m-h).toFixed(4))
+  console.log(h.toFixed(7))
 </script>
 
 
