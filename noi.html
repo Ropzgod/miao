@@ -535,11 +535,9 @@
     var a = Number(prompt(''))
     if (a == 1){
       one = one + 1
-    }
-    if (a == 5){
+    }else if (a == 5){
       five = five + 1
-    }
-    if (a == 10){
+    }else if (a == 10){
       ten = ten + 1
     }
   }
@@ -594,15 +592,23 @@
 <script id="ch0105/16">
   var N = Number(prompt(''))
   var K = Number(prompt(''))
-  var b = 0
+  var sum = 0
   var price = 200
+  var buy = false
   var i = 1
-  while (b <= price){
+  while (i <= 20){
+    sum = sum + N
+    if (sum >= price){
+    console.log(i)
+    var buy = true
+    break;
+    }
+    price = price * (1 + K / 100)
     i = i + 1
-    b = b + N
-    price = price + 200 * K / 100
   }
-  console.log(i)
+  if (buy = false){
+    console.log(impossible)
+  }
 </script>
 <script id="ch0105/17">
   var k = Number(prompt(''))
@@ -665,4 +671,243 @@
   console.log(h.toFixed(7))
 </script>
 
+<script id="ch0105/21">
+  var N = Number(prompt(''))
+  var value = N
+  while (value > 2){
+    if (value % 2 != 0){
+      value = value * 3 + 1
+      console.log(N + '*' + '3' + '+' + '1' + '=' + value)
+    }
+    if (value % 2 == 0){
+      value = value / 2
+      console.log(value + '/' + '2' + '=' + (value/2))
+    }
+  }console.log('End')
+// 是不是需要先判断在循环
+</script>
+
+<script id="ch0105/22">
+  var money = 0
+  var mom = 0
+  var b = 0
+  for (i = 0;i < 12;i = i + 1){
+    var budget = Number(prompt(''))
+    var money = money + 300
+    var money = money - budget
+    var a = Math.floor((money) / 100)
+    if (a >= 1){
+      mom = mom + a
+      money = money - a * 100
+    }
+    if (money < 0){
+      b = -(i + 1)
+    }
+  }
+  if (b == 0){
+    console.log(mom * 100 + mom * 100 * 0.2 + money)
+  } else {
+    console.log(b)
+  }
+</script>
+
+<script id="ch0105/23">
+  var m = Number(prompt(''))
+  var n = Number(prompt(''))
+  var b = 0
+  for (i = 0;i < n;i= i + 1){
+    var a = Number(prompt(''))
+    if (m > a){
+      m = m - a
+    }else (b = b + 1)
+  }console.log(b)
+</script>
+
+<script id="ch0105/24">
+  var time = Number(prompt(''))
+  var normalTime = 0 //当前连续数量
+  var max = 0  // 最大记录
+  for (i = 0;i < time;i++){
+    var 收缩压 = Number(prompt(''))
+    var 舒张压 = Number(prompt(''))
+    if (收缩压 > 90 && 收缩压 < 140 && 舒张压 >= 60 && 舒张压 <= 90){
+      normalTime++
+      if (normalTime > max){
+        max = normalTime
+      }
+    } else {
+      normalTime = 0
+    }
+  }
+
+  console.log(normalTime)
+</script>
+
+<script id="ch0105/25">
+  for (a = 1;a < 7;a++){
+    for (b = 0;b < 7;b++){
+      for (c = 0;c < 7;c++){
+        if (a * 9 * 9 + b * 9 + c == c * 7 * 7 + b * 7 + a){
+          console.log(c * 7 * 7 + b * 7 + a)
+          console.log(c * 100 + b * 10 + a)
+          console.log(a * 100 + b * 10 + c)
+          break;
+        }
+      }
+    }
+  }
+
+</script>
+
+<script id="ch0105/26">
+  var n = Number(prompt(''))
+  var quantity = 0
+  for(i = 0;i < n;i++){
+    var number = Number(prompt(''))
+    var 千位 = Math.floor(number / 1000)
+    var 百位 = Math.floor(number / 100) % 10
+    var 十位 = Math.floor(number / 10) % 10
+    var 个位 = number % 10
+    if (个位 - 千位 - 百位 - 十位 > 0){
+      quantity += 1
+    }
+  }console.log(quantity)
+</script>
+
+<script id="ch0105/27">
+  var K = Number(prompt(''))
+  for(n = 0;n < 15;n++){
+    if((2 + n) * (n - 1) / 2 > K){
+      console.log(n)
+      break;
+    }
+  }
+</script>
+
+<script id="ch0105/28">
+  var integer = Number(prompt())
+  var n = 0
+  for (i = 1;i < integer;i *= 10){
+    var n = (integer % (i * 10) - integer % i) / i
+    console.log(n)
+  }
+</script>
+
+<script id="ch0105/29">
+  var N = Number(prompt())
+  var newNumber = 0
+  if (N > 0){
+      while(N != 0){
+    newNumber *= 10
+    newNumber += N % 10
+    N = Math.floor (N / 10)
+    }
+  console.log(newNumber)
+  }else {
+    N = Math.abs(N)
+    while(N != 0){
+    newNumber *= 10
+    newNumber += N % 10
+    N = Math.floor (N / 10)
+    }
+    console.log(-newNumber)
+  }
+
+</script>
+
+<script id="ch0105/30">
+  var m = Number(prompt())
+  var k = Number(prompt())
+  var 累计3 = 0
+  for (i = 1;i < m;i *= 10){
+    var n = (m % (i * 10) - m % i) / i
+    if (n == 3){
+      累计3 += 1
+    }
+  }if (累计3 == k && m % 19 == 0){
+    console.log('Yes')
+  }else {
+    console.log('NO')
+  }
+</script>
+
+<script id="ch0105/31">
+  var N = Number(prompt())
+  var M = Number(prompt())
+  var 编号 = ('')
+  for (i = 2;i < N;i++){
+    var 灯 = true
+    for (k = 1;k < M;k++){
+      if (i % k == 0){
+        灯 = !灯
+      }
+    }
+    if (灯 == false){
+      编号 = 编号 + ',' + i
+    }
+  }
+  console.log(1 + 编号)
+</script>
+
+<script id="ch0105/32">
+  var n = Number(prompt())
+   var sum = 0
+   var p = 1
+   var q = 2
+   for (var i = 0; i < n; i++ ) {
+     sum += p + q
+     q = p + q
+     p = p - q
+   }
+   console.log (sum)
+</script>
+
+<script id="ch0105/33">
+  var n = Number(prompt())
+  var sum = 0
+  var sign = 1
+  for (var i = 1;i <= n;i++ ) {
+    sum += sign * 1 /i
+    sign = -sign
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/34">
+  var n = Number(prompt())
+
+  var sum = 0
+
+  var fac = 1
+
+  for (var i = 1;i <= n;i++){
+    f *= i
+    sum +=f
+  }
+
+  console.log(sum)
+</script>
+
+<script id="ch0105/35">
+    var n = Number(prompt())
+
+  var sum = 1
+
+  var fac = 1
+
+  for (var i = 1;i <= n;i++){
+    f *= i
+    sum += 1 / f
+  }
+
+  console.log(sum)
+</script>
+
+<script id="ch0105/36">
+
+</script>
+
+<script id="ch0105/37">
+
+</script>
 
