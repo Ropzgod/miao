@@ -674,14 +674,14 @@
 <script id="ch0105/21">
   var N = Number(prompt(''))
   var value = N
-  while (value > 2){
+  while (value > 1){
     if (value % 2 != 0){
       value = value * 3 + 1
       console.log(N + '*' + '3' + '+' + '1' + '=' + value)
     }
     if (value % 2 == 0){
-      value = value / 2
       console.log(value + '/' + '2' + '=' + (value/2))
+      value = value / 2
     }
   }console.log('End')
 // 是不是需要先判断在循环
@@ -734,13 +734,12 @@
       normalTime++
       if (normalTime > max){
         max = normalTime
-      }
-    } else {
+      }else {
       normalTime = 0
+      }
     }
   }
-
-  console.log(normalTime)
+  console.log(max)
 </script>
 
 <script id="ch0105/25">
@@ -825,7 +824,7 @@
       累计3 += 1
     }
   }if (累计3 == k && m % 19 == 0){
-    console.log('Yes')
+    console.log('YES')
   }else {
     console.log('NO')
   }
@@ -855,11 +854,11 @@
    var p = 1
    var q = 2
    for (var i = 0; i < n; i++ ) {
-     sum += p + q
+     sum += q / p
      q = p + q
-     p = p - q
+     p = q - p
    }
-   console.log (sum)
+   console.log (sum.toFixed(4))
 </script>
 
 <script id="ch0105/33">
@@ -870,7 +869,7 @@
     sum += sign * 1 /i
     sign = -sign
   }
-  console.log(sum)
+  console.log(sum.toFixed(4))
 </script>
 
 <script id="ch0105/34">
@@ -881,8 +880,8 @@
   var fac = 1
 
   for (var i = 1;i <= n;i++){
-    f *= i
-    sum +=f
+    fac *= i
+    sum += fac
   }
 
   console.log(sum)
@@ -896,8 +895,8 @@
   var fac = 1
 
   for (var i = 1;i <= n;i++){
-    f *= i
-    sum += 1 / f
+    fac *= i
+    sum += 1 / fac
   }
 
   console.log(sum)
@@ -905,7 +904,7 @@
 
 <script id="ch0105/36">
   var x = Number(prompt())
-  var m = Number(prompt())
+  var n = Number(prompt())
   var sum = 0
   var v = 1
   for (var i = 0;i <= n;i++ ){
@@ -961,9 +960,10 @@
       }
     }
     if (!i与7有关){
-      sum += i * 1
+      sum += i * i
     }
   }
+  console.log(sum)
 </script>
 
 <script id="ch0105/40">
@@ -1010,7 +1010,7 @@
   var str = ''
 
   for (var i = 0; i < h; i++){
-    for (var j = 0; j < w; J++){
+    for (var j = 0; j < w; j++){
       if (i == 0 || j == 0 || i == h - 1 || j == w -1 ){
         str += char
       }else {
@@ -1025,6 +1025,7 @@
       str += '\n'
     }
   }
+  console.log(str)
 </script>
 
 <script id="ch0105/43">
@@ -1067,7 +1068,7 @@
   var sum = 0
   var 面额 = 1
   var 天数 = 1
-  var 当前面额已收天数 = 1
+  var 当前面额已收天数 = 0
   for (var i = 1; i <= n; i++){
     sum += 面额
     当前面额已收天数++
