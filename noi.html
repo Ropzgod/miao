@@ -1139,7 +1139,7 @@
     return sum == n
   }
   for (i = 0;i < n / 2 ;i++) {
-    if (isNarcissistic(i)) {
+    if (isNarcissistic(i) && (i < 1000 || i > 100)) {
       console.log(i)
     }
   }
@@ -1147,6 +1147,7 @@
 </script>
 
 <script id ="palindrom">
+  var n = Number(prompt())
   function ispalindrom(n) {
     let m = n
     let reverse = 0
@@ -1158,6 +1159,10 @@
     }
     return reverse == n
   }
+  if (ispalindrom(n)) {
+    console.log('YES')
+  }
+
 </script>
 
 <script id ="weekday">
@@ -1166,10 +1171,34 @@
 
 <script id ="complete-number">
 
+  var n = Number(prompt())
+  function isCompleteNumber(n) {
+    let sum = 0
+
+    for (let i = 0; i < n / 2; i++) {
+      if (n % i == 0) {
+        sum += i
+      }
+    }
+    return sum
+  }
+  console.log(isCompleteNumber(n))
+
 </script>
 
 <script id ="complete-numbers">
+  let n = 1000
+  function isCompleteNumber(n) {
+      let sum = 0
 
+      for (let i = 0; i < n / 2; i++) {
+        if (n % i == 0) {
+          sum += i
+        }
+      }
+      return sum
+    }
+    console.log(isCompleteNumber(n))
 </script>
 
 <script id ="prime">
@@ -1181,7 +1210,46 @@
 </script>
 
 <script id ="itoa">
-
+  let n = Number(prompt())
+  let result = ''
+  function digiToChar(n) {
+    if (n == 0) {
+      return '0'
+    }
+    if (n == 1) {
+      return '1'
+    }
+    if (n == 2) {
+      return '2'
+    }
+    if (n == 3) {
+      return '3'
+    }
+    if (n == 4) {
+      return '4'
+    }
+    if (n == 5) {
+      return '5'
+    }
+    if (n == 6) {
+      return '6'
+    }
+    if (n == 7) {
+      return '7'
+    }
+    if (n == 8) {
+      return '8'
+    }
+    if (n == 9) {
+      return '9'
+    }
+    while (n > 0) {
+      let d = n % 10
+      result = digiToChar(d) +result
+      n = (n - d) / 10
+    }
+  }
+  console.log(result)
 </script>
 
 <script id ="lcf&lcm">
