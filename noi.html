@@ -1082,7 +1082,8 @@
 </script>
 
 
-<script id ="Narcissistic">
+<script id ="narcissistic">
+  var n = Number(prompt())
   function digitWidth(m) {
     let Width = 0
     if (m == 0){
@@ -1106,23 +1107,88 @@
       m = (m - 个位) / 10
     }
     return sum == n
-    console.log( isNarcissistic(n)? 'YES' : 'NO')
+  }
+
+  console.log( isNarcissistic(n)? 'YES' : 'NO')
+</script>
+
+<script id ="narcissistics">
+    var n = 10000
+  function digitWidth(m) {
+    let Width = 0
+    if (m == 0){
+      return 1
+    }
+    while (m > 0) {
+      var 个位 = m % 10
+      Width++
+      m = (m - 个位) / 10
+    }
+    return Width
+  }
+
+  function isNarcissistic(n) {
+    var w = digitWidth(n)
+    var sum = 0
+    m = n
+    while (m > 0) {
+      var 个位 = m % 10
+      sum += Math.pow(个位,w)
+      m = (m - 个位) / 10
+    }
+    return sum == n
+  }
+  for (i = 0;i < n / 2 ;i++) {
+    if (isNarcissistic(i)) {
+      console.log(i)
+    }
+  }
+
+</script>
+
+<script id ="palindrom">
+  function ispalindrom(n) {
+    let m = n
+    let reverse = 0
+    let sum
+    for (let i = 1; i < m;i * 10){
+      个位 = m % i - 个位
+      m = (m - 个位) / 10
+      reverse = reverse * 10 + 个位
+    }
+    return reverse == n
   }
 </script>
 
-<script id = >
+<script id ="weekday">
 
 </script>
 
-<script id = >
+<script id ="complete-number">
 
 </script>
 
-<script id = >
+<script id ="complete-numbers">
 
 </script>
 
-<script id = >
+<script id ="prime">
+
+</script>
+
+<script id ="primes">
+
+</script>
+
+<script id ="itoa">
+
+</script>
+
+<script id ="lcf&lcm">
+
+</script>
+
+<script id ="sqrt">
 
 </script>
 
