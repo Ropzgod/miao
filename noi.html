@@ -1082,3 +1082,48 @@
 </script>
 
 
+<script id ="Narcissistic">
+  function digitWidth(m) {
+    let Width = 0
+    if (m == 0){
+      return 1
+    }
+    while (m > 0) {
+      var 个位 = m % 10
+      Width++
+      m = (m - 个位) / 10
+    }
+    return Width
+  }
+
+  function isNarcissistic(n) {
+    var w = digitWidth(n)
+    var sum = 0
+    m = n
+    while (m > 0) {
+      var 个位 = m % 10
+      sum += Math.pow(个位,w)
+      m = (m - 个位) / 10
+    }
+    return sum == n
+    console.log( isNarcissistic(n)? 'YES' : 'NO')
+  }
+</script>
+
+<script id = >
+
+</script>
+
+<script id = >
+
+</script>
+
+<script id = >
+
+</script>
+
+<script id = >
+
+</script>
+
+
