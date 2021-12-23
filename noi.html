@@ -1258,11 +1258,36 @@
 </script>
 
 <script id ="prime">
-
+  let n = Number(prompt())
+  function prime(n) {
+    for (let i = 1; i < 2 / n;i++){
+      if (n % i == 0)
+      return false
+    }
+  }
+  if (prime(n)) {
+    console.log('YES')
+  }else {
+    console.log('NO')
+  }
 </script>
 
 <script id ="primes">
-
+  let n = 0
+  function primes(n) {
+    if (n == 2 || n == 3 || n == 5 || n == 7){
+      return true
+    }
+    if (n % 3 != 0 && n % 2 != 0 && n % 5 != 0 && n % 7 != 0) {
+      return true
+    }
+    return false
+  }
+  for (i = 2;i < 100;i++) {
+    if (primes(i)) {
+      console.log(i)
+    }
+  }
 </script>
 
 <script id ="itob">
