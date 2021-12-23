@@ -1169,7 +1169,54 @@
 </script>
 
 <script id ="weekday">
+  function isLeapYear(year) {
+    if (year % 400 == 0){
+      return true
+    }
+    if (year % 100 == 0) {
+      return false
+    }
+    if (year % 4 == 0) {
+      return true
+    }
+    return false
+  }
 
+  function getMonthDay(year, month) {
+    switch (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        return 31
+      case 2:
+        if (isLeapYear(year)) {
+          return 29
+        } else {
+          return 28
+        }
+        default:
+          return 30
+    }
+  }
+  function weekDay(year,month) {
+    var y = y - 1
+
+    var day = 365 * y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400)
+
+    for (var m = 1;m < 12; m++) {
+      day += getMonthDay(year,m)
+    }
+
+    day = (day + 1) % 7
+    return day
+  }
+  var year = Number(prompt())
+  var month = Number(prompt())
+  console.log(weekDay(year,month))
 </script>
 
 <script id ="complete-number">
@@ -1221,6 +1268,11 @@
 <script id ="itob">
   let n = Number(prompt())
   let result = ''
+  let 负数 = 0
+  if (n < 0){
+      负数 = 1
+      n = Math.abs(n)
+    }
   function digiToChar(n) {
     if (n == 0) {
       return '0'
@@ -1258,7 +1310,12 @@
       n = (n - d) / 10
     }
   }
-  console.log(result)
+  digiToChar(n)
+  if (负数 != 1) {
+     console.log(result)
+  }else {
+    console.log(-result)
+  }
 </script>
 
 <script id ="lcf&lcm">
@@ -1266,7 +1323,37 @@
 </script>
 
 <script id ="sqrt">
+  // 暴力硬解
+  // function sqrt(n) {
+  //   for (var i = 0; i < n; i += 0.001) {
+  //     if(Math.abs(i * i - n) < 0) {
+  //       return i
+  //     }
+  //   }
+  // }
+  // let n = Number(prompt())
+  // sqrt(n)
+  // console.log(i.toFixed(3))
+    function sqrt(n) {
+      let left = 0
+      let right = n
+      let mid
+      do {
+        mid = (right + left) / 2
 
+        if (mid * mid < n) {
+          left = mid
+        }else if (mid * mid > n) {
+          right = mid
+        }else {
+          return mid
+        }
+      } while (Math.abs(mid * mid - n) > 0.0001)
+      return mid
+    }
+    var n = Number(prompt())
+    sqrt(n)
+    console.log(sqrt(n).toFixed(3))
 </script>
 
 
