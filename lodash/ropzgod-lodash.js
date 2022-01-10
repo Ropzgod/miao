@@ -10,6 +10,20 @@ var ropzgod = {
     }
     var array = [array1,array2]
     return array
+  },
+
+  compact(ary) {
+    var array = []
+    // for (var i = 0; i < ary.length; i++) {
+    //   if (ary[i]) {
+    //     array.push(ary[i])
+    //   }
+    ary.forEach(element => {
+      if (ary[i]) {
+        array.push(ary[i])
+      }
+    });
+    return array
   }
 
 
