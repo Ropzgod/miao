@@ -12,15 +12,15 @@ var ropzgod = {
     return array
   },
 
-  compact(ary) {
+  compact: function(ary) {
     var array = []
     // for (var i = 0; i < ary.length; i++) {
     //   if (ary[i]) {
     //     array.push(ary[i])
     //   }
-    ary.forEach(element => {
-      if (ary[i]) {
-        array.push(ary[i])
+    ary.forEach(item => {
+      if (item) {
+        array.push(item)
       }
     });
     return array
