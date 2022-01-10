@@ -70,9 +70,65 @@
     dot (x + 1 , 70 ,'blue')
   }
   for (var x = 50; x < 300; x+= 5){
-    dot (x , 80 ,'blue')
-    dot (x + 1 , 80 ,'blue')
-    dot (x + 2 , 80 ,'blue')
+    if (x % 5 < 3) {
+      dot (x , 80 ,'blue')
+    }
   }
+  for (var x = 20, y = 40; x < 100 ;x++ , y++) {
+    dot(x,y ,'blue')
+  }
+  for (var x = 50;x < 300; x++) {
+    var y = x / Math.sqrt(3)
+    dot(x, y)
+  }
+  for (var x = 0; x < 500; x++) {
+    var y = x * 0.8
+    dot(x, y, 'aqua')
+  }
+  for (var y = 0;y < 100; y++) {
+    for (var x = 0;x < 100; x++) {
+      var color = 'rgb(' + x / 100 * 256 + ',' + y / 100 * 256 + ',' + 255 +')'
+      dot(x + 200 ,y + 250, color)
+      var x1 = 2 * x
+      var y1 = 2 * y
+      dot (x1, y1, color)
+    }
+  }
+  for (var y = 0;y < 100; y++) {
+    for (var x = 0;x < 100; x++) {
+      var color = 'rgb(' + x / 100 * 256 + ',' + y / 100 * 256 + ',' + 255 +')'
+      dot(x + 200 ,y + 250, color)
+      var x1 = 0.5 * x - 0.87 * y
+      var y1 = 0.87 * x +0.5 * y
+      dot (x1 + 100, y1 + 100, color)
+    }
+  }
+  function circle(cx,cy,r) {
+    var x = 0
+    var y = r
+    while (x <= y){
+      dot(x + cx, y + cy)
+      dot(-x + cx, y + cy)
+      dot(-x + cx, -y + cy)
+      dot(x + cx, -y + cy)
+      dot(y + cx, x + cy)
+      dot(-y + cx, x + cy)
+      dot(-y + cx, -x + cy)
+      dot(y + cx, -x + cy)
+      x++
+      var a = x * x + y * y
+      var b = x * x + (y - 1) * (y - 1)
+      if (Math.abs(a - r * r) > Math.abs(b - r * r)) {
+        y--
+      }
+    }
+  }
+  circle(150,150,100)
 </script>
 </html>
+
+1.00101100010001000100010001000100010001000100010001000100010001
+* 2 ** 101
+
+
+
