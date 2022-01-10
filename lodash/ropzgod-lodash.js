@@ -24,8 +24,27 @@ var ropzgod = {
       }
     });
     return array
-  }
+  },
 
+  drop: function (ary,n = 1) {
+    var array = []
+    for (i = n; i < ary.length; i++) {
+      array.push(ary[i])
+    }
+    return array
+  },
+
+  dropRight: function (ary, n = 1) {
+    var array = []
+    for (i = 0; i < ary.length - n; i++) {
+      array.push(ary[i])
+    }
+    return array
+  },
+
+  fill: function (ary, value, start = 0, end = array.length) {
+    
+  }
 
 
 
