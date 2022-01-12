@@ -28,7 +28,7 @@ var ropzgod = {
 
   drop: function (ary,n = 1) {
     var array = []
-    for (i = n; i < ary.length; i++) {
+    for (var i = n; i < ary.length; i++) {
       array.push(ary[i])
     }
     return array
@@ -36,14 +36,36 @@ var ropzgod = {
 
   dropRight: function (ary, n = 1) {
     var array = []
-    for (i = 0; i < ary.length - n; i++) {
+    for (var i = 0; i < ary.length - n; i++) {
       array.push(ary[i])
     }
     return array
   },
 
+
+  // Fills elements of array with value from start up to, but not including, end.
+  // @param {Array} array
   fill: function (ary, value, start = 0, end = array.length) {
-    
+    for (var i = start; i <= end - 1; i++) {
+      ary[i] = value
+    }
+    return ary
+  },
+
+
+
+  flatten: function (ary) {
+    var result = []
+    for (var i = 0; i < ary.length - 1; i++) {
+
+        if (!ary[i].length) {
+          result.push(ary[i])
+        }
+      for (var j = 0; j < ary[i].length; j++) {
+        result.push(ary[i][j])
+      }
+    }
+    return result
   }
 
 
