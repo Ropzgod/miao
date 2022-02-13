@@ -66,6 +66,41 @@ var ropzgod = {
       }
     }
     return result
+  },
+
+  flattenDeep: function (ary) {
+    var result = []
+    for (var i = 0; i < ary.length - 1; i++) {
+      if (!ary[i].length) {
+        result.push(ary[i])
+      }
+      flattenDeep(ary[i])
+      //digui
+      //return digui yihou fanhui zhi
+      // daoxu charu
+
+    }
+  },
+
+  fromPairs: function (ary) {
+    var result = {}
+    for (var i = 0; i < ary.length; i++) {
+      result[ary[i][0]] = ary[i][1]
+    }
+    return result
+  },
+
+  head: function (ary) {
+    var result = []
+    if (ary.length == 0) {
+      return undefined
+    } else {
+      return ary[0]
+    }
+  },
+
+  indexOf: function (ary,value,formIndex = 0) {
+
   }
 
 
